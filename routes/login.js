@@ -29,7 +29,7 @@ app.post('/login', (req, res) => {
     return res.status(401).json({ error: 'Email yoki parol noto‘g‘ri' });
   }
 
-  // JWT token yaratish
+  // JWT token yaratish 
   const auth_token = jwt.sign({ email: user.email }, SECRET_KEY, { expiresIn: '1h' });
 
   res.json({ auth_token });
