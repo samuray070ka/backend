@@ -44,6 +44,50 @@ const homeSchema = new mongoose.Schema({
     img: String,
     number: Number,
   }],
+  events: [{
+    img: String,
+    title: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+    description: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+  }],
+  directions: [{
+    img: String,
+    title: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+    description: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+  }],
+  news: [{
+    img: String,
+    title: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+    description: {
+      uz: String,
+      ru: String,
+      en: String,
+    },
+  }],
+  leaderships: [{
+    img: String,
+    name: String,
+    direction: String,
+  }],
 });
 
 const Home = mongoose.model('Home', homeSchema);
