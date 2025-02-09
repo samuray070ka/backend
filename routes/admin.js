@@ -65,7 +65,7 @@ router.post('/', upload.single('img'), async (req, res) => {
     } else {
       let model;
       switch (section) {
-        case 'events':
+        case 'events': 
           model = Event;
           break;
         case 'directions':

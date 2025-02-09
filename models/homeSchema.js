@@ -71,7 +71,7 @@ const homeSchema = new mongoose.Schema({
     },
   }],
   news: [{
-    img: String,
+    img: String, 
     title: {
       uz: String,
       ru: String,

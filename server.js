@@ -16,7 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 // Add this after your other middleware
 app.use((req, res, next) => {
   console.log(`📨 ${new Date().toISOString()} - ${req.method} ${req.url}`);
-  next();
+  next(); 
 });
 
 mongoose
