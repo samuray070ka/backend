@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 // Admin route'ini ulash
 const adminRoutes = require("./routes/admin");
 // Update the admin route registration to log when it's mounted
-app.use("/admin", (req, res, next) => {
+app.use("/admin", (req, res, next) => { 
   console.log('👉 Admin route accessed');
   adminRoutes(req, res, next);
 });
