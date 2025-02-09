@@ -14,7 +14,7 @@ app.use(bodyParser.json()); // JSON formatdagi so‘rovlarni o‘qish
 const users = [
   { 
     email: '1@gmail.com',
-    password: '1', // Haqiqiy loyihada parolni shifrlash kerak
+    password: '1', // Haqiqiy loyihada parolni shifrlash kerak 
   },
 ];
 
@@ -25,9 +25,9 @@ app.post('/login', (req, res) => {
   // Foydalanuvchini topish
   const user = users.find(user => user.email === email && user.password === password);
 
-  if (!user) {
+  if (!user) { 
     return res.status(401).json({ error: 'Email yoki parol noto‘g‘ri' });
-  }
+  } 
 
   // JWT token yaratish 
   const auth_token = jwt.sign({ email: user.email }, SECRET_KEY, { expiresIn: '1h' });
