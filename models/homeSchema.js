@@ -80,7 +80,7 @@ const homeSchema = new mongoose.Schema({
     description: {
       uz: String,
       ru: String,
-      en: String,
+      en: String, 
     },
   }],
   leaderships: [{
