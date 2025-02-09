@@ -42,6 +42,8 @@ app.use("/admin", (req, res, next) => {
   adminRoutes(req, res, next);
 });
 
+const contactRoutes = require("./routes/contact");
+app.post("/texnikum-turizm/contact", contactRoutes);
 // Boshqa route'lar
 const homeRoutes = require("./routes/home");
 app.use("/texnikum-turizm/home", homeRoutes);  // home.js faylini chaqirish
