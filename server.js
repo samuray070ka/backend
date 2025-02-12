@@ -8,7 +8,6 @@ const path = require('path'); // path modulini qo'shing
 dotenv.config();
 
 const app = express();
-app.use(cors());
 app.use(express.json()); // JSON ma'lumotlarini o'qish uchun
 app.use(bodyParser.json());
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
@@ -18,7 +17,13 @@ app.use((req, res, next) => {
   console.log(`📨 ${new Date().toISOString()} - ${req.method} ${req.url}`);
   next(); 
 });
+const corsOptions = {
+    origin: '*', // Allows all origins
+    methods: 'GET,POST,PUT,DELETE', // Allows specific methods
+    allowedHeaders: 'Content-Type,Authorization' // Allows specific headers
+};
 
+app.use(cors(corsOptions));
 mongoose
   .connect(process.env.MONGO_URI) 
   .then(() => {
@@ -50,4 +55,3 @@ app.use("/texnikum-turizm/home", homeRoutes);  // home.js faylini chaqirish
 
 const loginRoutes = require("./routes/login");
 app.post("/login", loginRoutes);
-
