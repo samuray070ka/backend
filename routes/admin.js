@@ -45,7 +45,6 @@ router.post('/', upload.single('img'), async (req, res) => {
         events: [],
         directions: [],
         news: [],
-        leaderships: [],
       });
     }
 
@@ -73,11 +72,6 @@ router.post('/', upload.single('img'), async (req, res) => {
           break;
         case 'news':
           model = News;
-          break;
-        case 'leaderships':
-          newSection.name = name;
-          newSection.direction = direction
-          model = Leadership;
           break;
         default:
           return res.status(400).json({ message: `Noto'g'ri section: ${section}` });
