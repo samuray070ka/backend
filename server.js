@@ -46,7 +46,9 @@ app.use("/admin", (req, res, next) => {
   console.log('👉 Admin route accessed');
   adminRoutes(req, res, next);
 });
-
+app.get('/admin', (req, res) => {
+  res.send('Admin route');
+});
 // const contactRoutes = require("./routes/contact");
 // app.post("/texnikum-turizm/contact", contactRoutes);
 // Boshqa route'lar
