@@ -13,8 +13,8 @@ app.use(bodyParser.json()); // JSON formatdagi so‘rovlarni o‘qish
 // Statik foydalanuvchi ma’lumotlari
 const users = [
   { 
-    email: 'admin@gmail.com',
-    password: 'admin123', // Haqiqiy loyihada parolni shifrlash kerak 
+    email: 'ttmmt@gmail.com',
+    password: 'ttmmt2025', // Haqiqiy loyihada parolni shifrlash kerak 
   },
 ];
 
